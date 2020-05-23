@@ -1,10 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        double creditAmount = 300000;              //Сумма кредита от 100_000 до 5_000_000
-        double percent = 18.5;                      //процентная ставка >0
-        int creditTime = 24;                        //срок кредита в месяцах от 1 года до 3
+        double creditAmount = 1_000_000;                 //Сумма кредита от 100_000 до 5_000_000
+        double percent = 9.99;                          //процентная ставка >0
+        int creditTimeYear = 1;                        //срок кредита в годах от 1 года до 3 лет
         CreditPaymentService service = new CreditPaymentService();
-        double totalPayment = service.calculate(creditAmount, percent, creditTime);
+        int totalPayment = (int)service.calculate(creditAmount, percent, creditTimeYear);
         if (totalPayment != 0) {
             System.out.println("Ежемесячный платеж = " + totalPayment);
         } else {
