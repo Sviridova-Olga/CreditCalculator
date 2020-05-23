@@ -11,9 +11,5 @@ public class CreditPaymentService {
         }
         return totalPayment;
     }
-    public double overPayment (double creditAmount, int creditTime, double totalPayment) {
-        double overPay = Math.round((totalPayment*creditTime - creditAmount)*100);
-        return  overPay/100;
-    }
 }
 
